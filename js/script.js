@@ -3,10 +3,10 @@ var tallaSeleccionada = '';
 
 function seleccionarColor(color) {
     colorSeleccionado = color;
-    var imagenZapatilla = document.getElementById('imagenZapatilla');
+    var imagenZapatilla = document.getElementById('imagen-zapatilla');
     imagenZapatilla.src = 'imagenes/' + color + '.png';
 
-    var colores = document.querySelectorAll('.color-option');
+    var colores = document.querySelectorAll('.opcion-color');
     for (var i = 0; i < colores.length; i++) {
         colores[i].classList.remove('selected');
     }
@@ -23,7 +23,7 @@ function seleccionarTalla(talla) {
 }
 
 function cambiarMetodoEntrega() {
-    var datosEntrega = document.getElementById('datosEntrega');
+    var datosEntrega = document.getElementById('datos-entrega');
     var metodoEntrega = document.getElementById('entrega').value;
     if (metodoEntrega === 'domicilio') {
         datosEntrega.style.display = 'block';

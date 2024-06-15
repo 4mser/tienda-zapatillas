@@ -30,13 +30,13 @@ header {
 }
 
 /* Estilos para las imágenes del producto */
-.product-image {
+.imagen-producto {
     padding: 2rem;
     position: relative;
     overflow: hidden;
 }
 
-.product-image img {
+.imagen-producto img {
     max-width: 100%;
     height: auto;
     transform: rotate(-35deg);
@@ -45,7 +45,7 @@ header {
     animation: zapatilla infinite 4s ease-in-out;
 }
 
-.product-image:hover img {
+.imagen-producto:hover img {
     transform: rotate(-35deg) scale(1.2);
 }
 
@@ -54,7 +54,7 @@ header {
         transform: rotate(-35deg) translate(0, 0);
     }
     50% {
-        transform: rotate(-35deg) translate(-10px, -30px) ;
+        transform: rotate(-35deg) translate(-10px, -30px);
         filter: drop-shadow(10px 40px 40px rgba(0, 0, 0, 0.316));
     }
     100% {
@@ -63,12 +63,12 @@ header {
 }
 
 /* Estilos para la descripción del producto */
-.description {
+.descripcion {
     font-size: 1.1rem;
     margin-bottom: 20px;
 }
 
-.price {
+.precio {
     font-size: 1.5rem;
     font-weight: bold;
     color: #111111ae;
@@ -76,12 +76,12 @@ header {
 }
 
 /* Estilos para las opciones de color */
-.color-options {
+.opciones-color {
     display: flex;
     margin-top: 10px;
 }
 
-.color-option {
+.opcion-color {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -90,11 +90,11 @@ header {
     margin-right: 10px;
 }
 
-.color-option:hover {
+.opcion-color:hover {
     border: 2px solid #000;
 }
 
-.color-option.selected {
+.opcion-color.selected {
     border: 2px solid #000;
 }
 
@@ -111,31 +111,31 @@ header {
 }
 
 /* Estilos para las opciones de talla */
-.size-options .btn-outline-dark {
+.opciones-talla .btn-outline-dark {
     color: #333;
     border-color: #333;
 }
 
-.size-options .btn-outline-dark:hover {
+.opciones-talla .btn-outline-dark:hover {
     background: #4ccfcf;
     border-color: #4ccfcf;
     color: white;
 }
 
-.size-options .btn-outline-dark.active {
+.opciones-talla .btn-outline-dark.active {
     background-color: #4ccfcf;
     border-color: #4ccfcf;
     color: #fff;
 }
 
 /* Estilos para el botón personalizado */
-.btn-primary-custom {
+.btn-primario {
     background-color: #4ccfcf;
     border-color: #4ccfcf;
     color: #fff;
 }
 
-.btn-primary-custom:hover {
+.btn-primario:hover {
     background-color: #3ba8a8;
     border-color: #3ba8a8;
     color: #fff;
@@ -158,22 +158,30 @@ footer a:hover {
     text-decoration: underline;
 }
 
+#resumen-texto {
+    color: white;
+}
+
 /* Estilos responsivos */
-@media (max-width: 767.98px) {
+@media (max-width: 800px) {
     .datos-zapatilla {
         flex-direction: column;
     }
-    .product-image {
+    .imagen-producto {
         order: 2;
     }
-    .description {
+    .descripcion {
         order: 1;
     }
-    .price, .color-options, .form-group, .btn {
+    .precio, .opciones-talla, .form-group, .btn {
         order: 3;
     }
-}
+    .opciones-color {
+        margin-top: 1rem;
+        justify-content: center;
+    }
 
-#resumen-texto {
-    color: white;
+    #titulo-zapatilla {
+        margin-top: 1rem;
+    }
 }
